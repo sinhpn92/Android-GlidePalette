@@ -19,7 +19,7 @@ import sinhpn.lib.glidepalette.R
 
 class MainActivity : AppCompatActivity() {
 
-    val URL = "https://raw.githubusercontent.com/sinhpn92/Android-GlidePalette/master/static/module-6.jpg"
+    val URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9k8bb91Cut1nxyqBUt8zmeVxfZZp_ZCRAOyIEAom84GGYXdCM&s"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

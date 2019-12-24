@@ -41,7 +41,7 @@ allprojects {
 Add the dependency:
 ```
 dependencies {
-        implementation 'com.github.sinhpn92:Android-GlidePalette:Tag'
+        implementation 'com.github.sinhpn92:Android-GlidePalette:$version'
 }
 ```
 

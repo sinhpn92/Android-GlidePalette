@@ -1,5 +1,6 @@
 Android GlidePalette
 =======
+[![](https://jitpack.io/v/sinhpn92/Android-GlidePalette.svg)](https://jitpack.io/#sinhpn92/Android-GlidePalette)
 
 Use palette for background view and text by glide v4 image loader. It's rewrite by kotlin.
 
@@ -24,7 +25,21 @@ Glide.with(this).load(url)
          .into(imageView);
 ```
 
-## Initialisation
+## Installation
+
+Add it in your root build.gradle at the end of repositories:
+
+```allprojects {
+         repositories {
+                  ...
+                  maven { url 'https://jitpack.io' }
+         }
+}```
+
+Add the dependency:
+```dependencies {
+        implementation 'com.github.sinhpn92:Android-GlidePalette:Tag'
+}```
 
 First, init GlidePalette with an **Url**
 

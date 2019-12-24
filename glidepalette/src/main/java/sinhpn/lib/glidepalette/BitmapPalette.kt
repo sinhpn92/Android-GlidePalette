@@ -136,21 +136,20 @@ abstract class BitmapPalette {
         }
         if (palette == null) return
         for (target in targets) {
-            var swatch: Palette.Swatch? = null
-            when (target.paletteProfile) {
-                Profile.VIBRANT -> swatch =
-                    palette.vibrantSwatch
-                Profile.VIBRANT_DARK -> swatch =
-                    palette.darkVibrantSwatch
-                Profile.VIBRANT_LIGHT -> swatch =
-                    palette.lightVibrantSwatch
-                Profile.MUTED -> swatch =
-                    palette.mutedSwatch
-                Profile.MUTED_DARK -> swatch =
-                    palette.darkMutedSwatch
-                Profile.MUTED_LIGHT -> swatch =
-                    palette.lightMutedSwatch
+
+            val s = palette.swatches
+            println(s)
+
+            val swatch: Palette.Swatch? = when (target.paletteProfile) {
+                Profile.VIBRANT -> palette.vibrantSwatch
+                Profile.VIBRANT_DARK -> palette.darkVibrantSwatch
+                Profile.VIBRANT_LIGHT -> palette.lightVibrantSwatch
+                Profile.MUTED -> palette.mutedSwatch
+                Profile.MUTED_DARK -> palette.darkMutedSwatch
+                Profile.MUTED_LIGHT -> palette.lightMutedSwatch
+                else -> null
             }
+
             if (swatch == null) return
             if (target.targetsBackground == null) return
             for (t in target.targetsBackground!!) {
@@ -193,6 +192,8 @@ abstract class BitmapPalette {
     }
 
     protected fun start(bitmap: Bitmap) {
+
+        println("--->>> start bitmap palet: $skipCache $bitmap")
         val skipCache = skipCache
         if (!skipCache) {
             val palette = CACHE[url]

@@ -19,7 +19,7 @@ import sinhpn.lib.glidepalette.R
 
 class MainActivity : AppCompatActivity() {
 
-    val URL = "http://i.huffpost.com/gen/2299606/images/n-STARRY-NIGHT-628x314.jpg"
+    val URL = "https://raw.githubusercontent.com/sinhpn92/Android-GlidePalette/master/static/module-6.jpg"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                     ) // optional
                     ?.intoCallBack(object : BitmapPalette.CallBack {
                         override fun onPaletteLoaded(@Nullable palette: Palette?) { //specific task
-
+                            println(">>onPaletteLoaded > $palette")
                         }
                     }) // optional
                     ?.setGlideListener(object : RequestListener<Drawable> {
@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                             target: Target<Drawable?>,
                             isFirstResource: Boolean
                         ): Boolean {
+                            e?.printStackTrace()
                             return false
                         }
 
@@ -74,6 +75,7 @@ class MainActivity : AppCompatActivity() {
                             dataSource: DataSource,
                             isFirstResource: Boolean
                         ): Boolean {
+                            println(">>onResourceReady > $resource")
                             return false
                         }
                     }) // optional: do stuff with the builder

@@ -29,17 +29,21 @@ Glide.with(this).load(url)
 
 Add it in your root build.gradle at the end of repositories:
 
-```allprojects {
+```
+allprojects {
          repositories {
                   ...
                   maven { url 'https://jitpack.io' }
          }
-}```
+}
+```
 
 Add the dependency:
-```dependencies {
+```
+dependencies {
         implementation 'com.github.sinhpn92:Android-GlidePalette:Tag'
-}```
+}
+```
 
 First, init GlidePalette with an **Url**
 

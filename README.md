@@ -94,10 +94,9 @@ Or simply return into CallBack
 
 ```java
 .intoCallBack(
-    new GlidePalette.CallBack() {
-          @Override
-          public void onPaletteLoaded(Palette palette) {
-              //specific task
-          }
-    })
+    object : BitmapPalette.CallBack {
+         override fun onPaletteLoaded(@Nullable palette: Palette?) { //specific task
+
+         }
+})
 ```

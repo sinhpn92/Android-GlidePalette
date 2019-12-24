@@ -1,0 +1,2 @@
+include ':app', ':glidepalette'
+rootProject.name='GlidePalette'

@@ -7,6 +7,7 @@ Use palette for background view and text by glide v4 image loader. It's rewrite 
 ![Alt sample](https://github.com/sinhpn92/Android-GlidePalette/raw/master/static/Screenshot_1577178027.png)
 
 
+# Current Version: 0.1.0
 
 # Sample
 
